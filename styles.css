@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Parallax background */
+.parallax {
+    background-image: url('johannes-plenio-RwHv7LgeC7s-unsplash.jpg'); /* Your image URL */
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover; /* or '100% auto' */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Glassmorphism effect for social media links */
+.glass-box {
+    backdrop-filter: blur(10px); /* Increased blur for more effect */
+    background: rgba(255, 255, 255, 0.3); /* Adjusted opacity for transparency */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-box h1, .glass-box h2, .glass-box p {
+    color: #000; /* Darker text color for better visibility */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Optional text shadow */
+}
+
+/* Social Media Section */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Skeuomorphic buttons */
+.social-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 165, 0, 0.8); /* Darker Halloween orange */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 140, 0, 0.9); /* Brighter orange on hover */
+}
+
+/* Animated icons */
+.social-icon i {
+    font-size: 36px; /* Adjusted icon size */
+    color: #333; /* Icon color */
+}
+
+/* Remove underline from project links */
+.project {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color for projects */
+}
+
+/* Project section styling */
+.project-section {
+    padding: 100px 20px;
+    background-color: rgba(255, 204, 0, 0.8); /* Transparent yellow background */
+    color: black;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    perspective: 1000px; /* Enable 3D effect */
+}
+
+.project {
+    width: 80%;
+    padding: 20px;
+    border-radius: 15px;
+    background: black;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.project:hover {
+    transform: rotateY(10deg) translateZ(20px); /* Popping out effect */
+}
+
+.project h2 {
+    margin-bottom: 10px;
+    color: #FF4500; /* Darker Halloween orange */
+}
+
+/* Faux dimensional scrolling */
+.scroll-effect {
+    background: linear-gradient(180deg, #333, #000);
+    padding: 100px 20px;
+    position: relative;
+}
+
+.scroll-effect .content {
+    position: relative;
+    z-index: 2;
+}
+
+.scroll-effect .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 1;
+}
+
+.glass-box h1 {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project h2:hover {
+    color: #fff;
+    text-decoration: none; /* No underline on hover */
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: 90%; /* Make projects take more width on smaller screens */
+    }
+}
+/* Other existing CSS code */
+
+/* Remove underline from social media links */
+.social-media a {
+    text-decoration: none; /* Remove underline */
+}
+
+.social-media a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
